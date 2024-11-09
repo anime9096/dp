@@ -1,0 +1,54 @@
+6.CSV
+
+"""(i) Algorithm
+Import Required Libraries: Import pandas, numpy, and other libraries for data analysis.
+Load Dataset: Use pandas to load the dataset into a DataFrame.
+Initial Data Inspection:
+Check for missing values using isnull().
+Generate summary statistics using describe() to understand data distribution.
+Data Exploration:
+Check the data types of each variable.
+Identify categorical and numerical variables.
+Check the shape (dimensions) of the DataFrame.
+Conclusion: Summarize findings from data preprocessing."""
+
+
+# Step 1: Import required libraries
+import pandas as pd
+import numpy as np
+
+# Step 2: Load the Iris dataset from a CSV file
+# Replace 'Iris.csv' with the actual path if you downloaded it
+data = pd.read_csv("Iris.csv")
+
+# Step 3: Check for missing values
+missing_values = data.isnull().sum()
+print("Missing Values:\n", missing_values)
+
+# Step 4: Generate initial statistics
+data_statistics = data.describe()
+print("\nData Statistics:\n", data_statistics)
+
+# Step 5: Check variable types and DataFrame dimensions
+print("\nData Types:\n", data.dtypes)
+print("\nDataFrame Dimensions:", data.shape)
+
+# Step 6: Brief variable descriptions
+# Example descriptions based on the Iris dataset
+variable_descriptions = {
+    'sepal_length': 'Length of the sepal in cm (numerical)',
+    'sepal_width': 'Width of the sepal in cm (numerical)',
+    'petal_length': 'Length of the petal in cm (numerical)',
+    'petal_width': 'Width of the petal in cm (numerical)',
+    'species': 'Species of the iris flower (categorical)'
+}
+print("\nVariable Descriptions:\n", variable_descriptions)
+
+
+
+"""(iii) Conclusion
+Missing Values: The output from isnull() reveals whether any columns have missing values.
+Initial Statistics: The describe() function provides summary statistics such as mean, standard deviation, and quartiles for numerical variables, helping us understand data distribution.
+Data Types and Variable Descriptions: Identifying data types helps determine which columns require further processing (e.g., encoding for categorical variables).
+Data Dimensions: The shape attribute confirms the number of rows and columns in the dataset.
+This code offers an overview of the dataset’s structure, helps identify any potential issues (like missing values), and provides insights into variable distributions and types. This is a foundational step before diving into detailed data analysis or model training. Let me know if you'd like to dive deeper into specific analyses or transformations."""

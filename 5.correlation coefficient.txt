@@ -1,0 +1,29 @@
+5.correlation coefficient
+
+"""(i) Algorithm
+Data Loading: Load the Iris dataset using a library.
+Data Preparation: Extract relevant numerical features from the dataset.
+Calculate Correlation: Compute the correlation matrix to see relationships between features.
+Display Results: Output the correlation matrix and interpret results."""
+
+
+# Step 1: Import necessary libraries
+import pandas as pd
+from sklearn.datasets import load_iris
+
+# Step 2: Load the Iris dataset
+iris = load_iris()
+data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+# Step 3: Calculate the correlation coefficient matrix
+correlation_matrix = data.corr()
+
+# Step 4: Display the correlation matrix
+print("Correlation Coefficient Matrix:\n", correlation_matrix)
+
+
+"""(iii) Conclusion
+Interpreting the Correlation Matrix:
+Positive values close to 1 indicate a strong positive correlation (e.g., petal length and petal width tend to increase together).
+Negative values indicate an inverse relationship, although this is less common in the Iris dataset.
+Values near 0 suggest no strong linear correlation, as seen in some relationships between sepal and petal dimensions."""

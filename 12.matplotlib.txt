@@ -1,0 +1,58 @@
+12.matplotlib
+
+"""(i) Algorithm for Plotting with Matplotlib
+Import Matplotlib: Import the matplotlib.pyplot library to create plots.
+Prepare Data: Define the data to be visualized. This can be in the form of lists, arrays, or pandas DataFrames.
+Create Plot:
+For a pie chart, use plt.pie().
+For a scatter plot, use plt.scatter().
+Customize the Plot: Add titles, labels, legends, and other customizations (e.g., colors, sizes).
+Display the Plot: Use plt.show() to display the plot on the screen.
+Analyze the Plot: Look at the visualized data and derive conclusions from it."""
+
+
+import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
+
+# --------------------- Pie Chart ---------------------
+# Data for the pie chart
+labels = ['Python', 'Java', 'C++', 'JavaScript']
+sizes = [45, 30, 15, 10]  # Percentage values
+colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']  # Custom colors
+explode = (0.1, 0, 0, 0)  # Explode the first slice
+
+# Create pie chart
+plt.figure(figsize=(10, 5))  # Adjust the figure size
+plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+
+# Add title for pie chart
+plt.title('Programming Language Popularity')
+
+# Display the pie chart
+plt.show()
+
+# --------------------- Scatter Plot ---------------------
+# Data for the scatter plot
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 25, 30, 40]
+sizes = [50, 100, 150, 200, 250]  # Bubble sizes
+
+# Create scatter plot
+plt.figure(figsize=(10, 5))  # Adjust the figure size
+plt.scatter(x, y, s=sizes, c='blue', alpha=0.5)
+
+# Add titles and labels for scatter plot
+plt.title('Scatter Plot Example')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+
+# Display the scatter plot
+plt.show()
+
+
+
+"""Conclusion:
+Pie Chart: The pie chart will visually represent the popularity of programming languages in percentage. The first slice (Python) is highlighted with an explosion effect, making it stand out.
+Scatter Plot: The scatter plot will show a relationship between the variables on the X and Y axes. The size of each data point (bubble) is proportional to the values in the sizes array, showing variation in the data distribution.
+Running these plots will allow you to practice visualizing data and interpreting the results effectively."""

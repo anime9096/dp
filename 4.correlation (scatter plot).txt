@@ -1,0 +1,34 @@
+4.correlation (scatter plot)
+
+"""(i) Algorithm
+Data Collection: Gather the dataset with multiple variables (e.g., temperature, humidity, sales, etc.).
+Data Preparation: Load the dataset, handle missing values if any, and select the variables to analyze.
+Correlation Analysis: Calculate the correlation coefficients between variables.
+Scatter Plot Creation: Plot scatter plots to visualize relationships between variable pairs.
+Result Analysis: Interpret the correlation coefficients and patterns in scatter plots."""
+
+
+# Step 1: Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Step 2: Load the dataset
+# Replace 'your_dataset.csv' with the actual dataset file
+data = pd.read_csv('your_dataset.csv')
+
+# Step 3: Display the correlation matrix
+correlation_matrix = data.corr()
+print("Correlation Matrix:\n", correlation_matrix)
+
+# Step 4: Visualize relationships with scatter plots
+sns.pairplot(data)
+plt.show()
+
+
+
+"""(iii) Conclusion
+Interpreting the Correlation Matrix: Look at the values in the correlation matrix to determine if variables have a strong, moderate, or weak correlation.
+Values closer to 1 or -1 indicate stronger correlations (positive or negative).
+Values close to 0 indicate weak or no correlation.
+Analyzing Scatter Plots: Patterns in scatter plots can show linear or non-linear relationships. A positive slope indicates a positive relationship, while a negative slope shows a negative relationship."""

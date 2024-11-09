@@ -1,0 +1,42 @@
+10(a).numpy
+
+"""(i) Algorithm
+Import the NumPy Library: Import NumPy to use its array functionalities.
+Define the Array: Create a sample array with specified elements.
+Determine Properties of the Array:
+Data Type: Use dtype to find the data type of elements in the array.
+Shape: Use shape to find the array's dimensions (rows and columns).
+Dimension: Use ndim to determine the number of dimensions.
+Size: Use size to find the total number of elements.
+Print Results: Display the array properties."""
+
+
+# Step 1: Import NumPy library
+import numpy as np
+
+# Step 2: Define the input array
+array = np.array([
+    [2, 3, 4],
+    [6, 7, 8],
+    [1, 2, 0]
+])
+
+# Step 3: Determine array properties
+array_type = array.dtype         # Data type of the array elements
+array_shape = array.shape        # Shape of the array
+array_dimension = array.ndim     # Number of dimensions
+array_size = array.size          # Total number of elements
+
+# Step 4: Print the results
+print("Array:\n", array)
+print("\nData Type:", array_type)
+print("Shape:", array_shape)
+print("Dimension:", array_dimension)
+print("Size:", array_size)
+
+
+"""(iv) Conclusion
+Data Type: Indicates the type of elements stored (e.g., int or float).
+Shape: Provides the dimensions of the array as (rows, columns). Here, it is (3, 3).
+Dimension: Shows the number of dimensions in the array. A 2D array has ndim = 2.
+Size: Indicates the total number of elements, which is useful for understanding the data volume."""

@@ -1,0 +1,41 @@
+13.pandas
+
+"""(i) Algorithm to Create a DataFrame using Pandas
+Import Pandas: Import the pandas library to work with data frames.
+Prepare Data: Define a list of elements (like names, ages, occupations, and cities) which you want to store in a data frame.
+Create DataFrame: Use pd.DataFrame() to create a DataFrame from the list of elements.
+Set Column Names: Define the column names for the data frame (e.g., "Name", "Age", "Occupation", "City").
+Access a Column: To access a particular column, you can use the column name in the DataFrame.
+Display Data: Use df.head() or simply print the DataFrame to display the result.
+Conclusion: Summarize the content and structure of the DataFrame."""
+
+
+import pandas as pd
+
+# Data for the DataFrame
+data = [
+    ['Aarav', 25, 'Engineer', 'Delhi'],
+    ['Vivaan', 30, 'Doctor', 'Mumbai'],
+    ['Aditya', 22, 'Designer', 'Bangalore'],
+    ['Vihaan', 27, 'Teacher', 'Chennai'],
+    ['Reyansh', 29, 'Artist', 'Kolkata']
+]
+
+# Column names for the DataFrame
+columns = ['Name', 'Age', 'Occupation', 'City']
+
+# Create DataFrame
+df = pd.DataFrame(data, columns=columns)
+
+# Select only the first column 'Name'
+name_column = df['Name']
+
+# Display the first column
+print(name_column)
+
+
+
+"""Conclusion:
+The Python code successfully creates a DataFrame using a list of elements (names, ages, occupations, and cities).
+The program then extracts and displays only the "Name" column of the DataFrame.
+This demonstrates how to create and manipulate a DataFrame using pandas, a key skill for data analysis in Python."""

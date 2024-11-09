@@ -1,0 +1,34 @@
+11.pandas
+
+"""(i) Algorithm
+Import Pandas Library: Import Pandas to create and manage DataFrames.
+Define the Data: Create a list of dictionaries, where each dictionary represents a row with columns: "Name," "Age," "Occupation," and "City."
+Create DataFrame: Use pd.DataFrame() to create a DataFrame from the list.
+Print Bottom Rows: Use the tail() function to display the last two rows.
+Display Results: Print the entire DataFrame and then print the bottom two rows."""
+
+
+# Step 1: Import the Pandas library
+import pandas as pd
+
+# Step 2: Define the data
+data = [
+    {"Name": "Aakash", "Age": 25, "Occupation": "Doctor", "City": "Delhi"},
+    {"Name": "Viyansh", "Age": 30, "Occupation": "Engineer", "City": "Nashik"},
+    {"Name": "Aditya", "Age": 28, "Occupation": "Designer", "City": "Punjab"}
+]
+
+# Step 3: Create the DataFrame
+df = pd.DataFrame(data)
+
+# Step 4: Print the entire DataFrame (optional for verification)
+print("Full DataFrame:\n", df)
+
+# Step 5: Print the bottom 2 rows of the DataFrame
+print("\nBottom 2 Rows:\n", df.tail(2))
+
+
+
+"""(iv) Conclusion
+DataFrame Creation: The code successfully creates a DataFrame using a list of dictionaries, making it easy to manage and analyze tabular data.
+Displaying Bottom Rows: The tail() function allows us to quickly access the last few rows of the DataFrame, useful for checking recent data entries or validating the DataFrame structure."""

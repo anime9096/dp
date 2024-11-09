@@ -1,0 +1,44 @@
+3.matplotlib
+
+"""(i) Algorithm
+Import Matplotlib: Import the matplotlib.pyplot module to create and customize plots.
+Define Data for the Plots:
+For the linear plot, define two lists of data points, x and y, that will represent points on the x-axis and y-axis, respectively.
+For the bar plot, define two lists: categories (x-axis categories) and values (heights of the bars).
+Create the Linear Plot:
+Use plt.plot(x, y) to create a line plot.
+Customize the plot by adding a title, axis labels, and a legend.
+Create the Bar Plot:
+Use plt.bar(categories, values) to create a bar plot.
+Customize with a title, axis labels, and different colors for each bar if desired.
+Display the Plots: Use plt.show() to render each plot."""
+
+
+
+import matplotlib.pyplot as plt
+
+# Data for the linear plot
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+# Data for the bar plot
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [5, 7, 3, 8, 4]
+
+# Create a linear plot
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, marker='o', color='b', label='Linear Plot')
+plt.title("Linear Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Create a bar plot
+plt.figure(figsize=(8, 4))
+plt.bar(categories, values, color=['red', 'green', 'blue', 'purple', 'orange'])
+plt.title("Bar Plot")
+plt.xlabel("Categories")
+plt.ylabel("Values")
+plt.show()

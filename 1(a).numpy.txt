@@ -1,0 +1,35 @@
+1.numpy
+
+"""(i) Algorithm
+Import Numpy: Import the numpy library to work with arrays.
+Create the Array: Define the input array using numpy's array() function.
+Determine Properties:
+Use .dtype to get the type of elements in the array.
+Use .shape to get the shape of the array.
+Use .ndim to get the number of dimensions of the array.
+Use .size to get the total number of elements in the array.
+Display Results: Print each of these properties."""
+
+"""(ii) Python Code
+Here’s the code based on the above algorithm:"""
+
+
+import numpy as np
+
+# Define the input array
+array = np.array([[4, 3, 2], [5, 6, 7]])
+
+# Determine properties of the array
+array_type = array.dtype          # Type of elements in the array
+array_shape = array.shape         # Shape of the array
+array_dimension = array.ndim      # Dimension of the array
+array_size = array.size           # Total number of elements in the array
+
+# Print the results
+print("Array Type:", array_type)
+print("Array Shape:", array_shape)
+print("Array Dimension:", array_dimension)
+print("Array Size:", array_size)
+
+"""(v) Conclusion
+The program successfully determines and displays the properties of the input array using Numpy. This includes the data type of the elements, shape, dimension, and total number of elements, providing a quick summary of the array's structure."""

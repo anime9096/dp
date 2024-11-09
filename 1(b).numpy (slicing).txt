@@ -1,0 +1,43 @@
+2.numpy (slicing)
+
+"""(i) Algorithm
+Import Numpy: Import the numpy library to perform array operations.
+Create the Input Array: Define the 3x3 input array using numpy's array() function.
+Slice the Array:
+Row-wise Slicing:
+-Select the first row.
+-Select the second row.
+-Select the third row.
+Column-wise Slicing:
+-Select the first column.
+-Select the second column.
+-Select the third column.
+Display Results: Print the results of each row and column slice."""
+
+
+import numpy as np
+
+# Define the input array
+array = np.array([[1, 3, 9], [2, 5, 4], [6, 8, 2]])
+
+# Perform row-wise slicing
+first_row = array[0, :]
+second_row = array[1, :]
+third_row = array[2, :]
+
+# Perform column-wise slicing
+first_column = array[:, 0]
+second_column = array[:, 1]
+third_column = array[:, 2]
+
+# Display the results
+print("First Row:", first_row)
+print("Second Row:", second_row)
+print("Third Row:", third_row)
+print("First Column:", first_column)
+print("Second Column:", second_column)
+print("Third Column:", third_column)
+
+
+"""(v) Conclusion
+The program successfully slices the array row-wise and column-wise using Numpy. This demonstrates how individual rows and columns can be accessed and manipulated separately within a 2D array structure. ​"""

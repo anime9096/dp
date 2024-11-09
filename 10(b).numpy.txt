@@ -1,0 +1,39 @@
+10(b).numpy
+
+"""(i) Algorithm
+Import the NumPy Library: Import NumPy to work with arrays.
+Define the Array: Create the array using the given elements.
+Slice the Array:
+Row-wise Slicing: Extract specific rows by specifying row indices.
+Column-wise Slicing: Extract specific columns by specifying column indices.
+Print Results: Display the sliced sections of the array."""
+
+
+# Step 1: Import NumPy library
+import numpy as np
+
+# Step 2: Define the input array
+array = np.array([
+    [2, 7],
+    [5, 8],
+    [6, 10]
+])
+
+# Step 3: Perform row-wise and column-wise slicing
+# Row-wise slicing (example: extract the first two rows)
+row_slice = array[:2, :]  # Slices rows 0 and 1
+
+# Column-wise slicing (example: extract the first column)
+col_slice = array[:, :1]  # Slices only the first column
+
+# Step 4: Print the results
+print("Original Array:\n", array)
+print("\nRow-wise Slicing (first two rows):\n", row_slice)
+print("\nColumn-wise Slicing (first column):\n", col_slice)
+
+
+
+"""(iv) Conclusion
+Row-wise Slicing: By selecting specific row indices, we can extract certain rows. Here, we extracted the first two rows.
+Column-wise Slicing: By specifying column indices, we can extract certain columns. Here, we extracted the first column.
+This program demonstrates how to slice a NumPy array to access specific rows and columns, which is useful for isolating parts of the dataset for analysis or further processing."""

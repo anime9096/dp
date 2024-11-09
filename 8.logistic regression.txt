@@ -1,0 +1,57 @@
+8.logistic regression 
+
+
+"""(i) Reading the Dataset
+First, ensure that you have the Social_Network_Ads.csv file locally or download it from an open source (e.g., Kaggle). Place it in your working directory to load into a pandas DataFrame."""
+
+
+# Step 1: Import necessary libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# Step 2: Load the Social Network Ads dataset
+data = pd.read_csv('Social_Network_Ads.csv')
+
+# Step 3: Inspect the dataset (optional for verification)
+print("First few rows of the dataset:\n", data.head())
+print("\nData Description:\n", data.describe())
+
+# Step 4: Define the features (X) and target variable (y)
+# Assuming that 'Age' and 'EstimatedSalary' are predictors and 'Purchased' is the target
+X = data[['Age', 'EstimatedSalary']]
+y = data['Purchased']
+
+# Step 5: Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+# Step 6: Standardize the feature variables for better model performance
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Step 7: Initialize and train the Logistic Regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Step 8: Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Step 9: Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+print("\nModel Accuracy:", accuracy)
+
+conf_matrix = confusion_matrix(y_test, y_pred)
+class_report = classification_report(y_test, y_pred)
+
+print("\nConfusion Matrix:\n", conf_matrix)
+print("\nClassification Report:\n", class_report)
+
+
+"""(iii) Conclusion
+Accuracy Score: The accuracy score gives the overall percentage of correct predictions. A higher accuracy indicates a better model fit.
+Confusion Matrix: The confusion matrix shows the model’s performance in terms of true positives, true negatives, false positives, and false negatives, helping us understand specific areas where the model may misclassify.
+Classification Report: This report provides metrics such as precision, recall, and F1-score for each class, which are valuable for assessing performance, especially in imbalanced datasets.
+With this Logistic Regression model, you can determine how features like age and estimated salary affect the likelihood of a purchase, which provides insights into consumer behavior. Let me know if you'd like to go further into model tuning or feature engineering!"""

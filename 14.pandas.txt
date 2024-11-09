@@ -1,0 +1,41 @@
+14.pandas
+
+"""Import Pandas: Import the pandas library to handle DataFrame operations.
+Prepare Data: Define a list of elements, where each element is a sublist containing data (Name, Age, Occupation, City).
+Define Column Names: Define a list of column names (e.g., "Name", "Age", "Occupation", "City").
+Create DataFrame: Use pd.DataFrame() to create the DataFrame with the data and column names.
+Print First 2 Rows: Use df.head(2) to print the first two rows of the DataFrame.
+Display Shape: Use df.shape to find the shape (number of rows and columns) of the DataFrame.
+Conclusion: Summarize the operations and results."""
+
+
+
+import pandas as pd
+
+# Data for the DataFrame
+data = [
+    ['Aakash', 25, 'Doctor', 'Delhi'],
+    ['Viyansh', 30, 'Engineer', 'Nashik'],
+    ['Aditya', 28, 'Designer', 'Punjab']
+]
+
+# Column names for the DataFrame
+columns = ['Name', 'Age', 'Occupation', 'City']
+
+# Create DataFrame
+df = pd.DataFrame(data, columns=columns)
+
+# Print the first 2 rows
+print("First 2 Rows:")
+print(df.head(2))
+
+# Find the shape of the DataFrame (number of rows and columns)
+shape = df.shape
+print("\nShape of the DataFrame:", shape)
+
+
+
+"""Conclusion:
+The Python code successfully creates a DataFrame using the input list and assigns appropriate column names.
+It prints the first two rows of the DataFrame using df.head(2) and correctly identifies the shape of the DataFrame, which has 3 rows and 4 columns.
+This demonstrates how to create, inspect, and manipulate data frames effectively using pandas."""

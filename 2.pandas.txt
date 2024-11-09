@@ -1,0 +1,29 @@
+2.pandas
+
+"""(i) Algorithm
+Import Pandas: Import the pandas library to work with data frames.
+Define Data: Create a list of dictionaries, where each dictionary represents a row with keys corresponding to column names and values corresponding to row entries.
+Create Data Frame: Use pd.DataFrame() to convert the list of dictionaries into a pandas data frame.
+Display the First 3 Rows: Use the .head() method with an argument of 3 to print the first 3 rows."""
+
+
+import pandas as pd
+
+# Define the data as a list of dictionaries
+data = [
+    {"Name": "Aarav", "Age": 25, "Occupation": "Engineer", "City": "Delhi"},
+    {"Name": "Vivaan", "Age": 30, "Occupation": "Doctor", "City": "Mumbai"},
+    {"Name": "Aditya", "Age": 22, "Occupation": "Designer", "City": "Bangalore"},
+    {"Name": "Vihaan", "Age": 27, "Occupation": "Teacher", "City": "Chennai"},
+    {"Name": "Reyansh", "Age": 29, "Occupation": "Artist", "City": "Kolkata"}
+]
+
+# Create the data frame
+df = pd.DataFrame(data)
+
+# Display the first 3 rows
+print(df.head(3))
+
+
+"""(v) Conclusion
+The program successfully creates a pandas data frame from a list of dictionaries and displays the first 3 rows. This demonstrates how to set up structured data in Python using Pandas, allowing for efficient data handling and quick preview of datasets with the .head() function."""
